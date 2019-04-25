@@ -1,6 +1,6 @@
 {
   "name": "react-declarative-fetch",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Declarative Way To Make HTTP Requests in React.",
   "main": "./dist/index.js",
   "scripts": {
