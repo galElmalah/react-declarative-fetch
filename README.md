@@ -18,7 +18,7 @@ In most cases, when making an async external call from a component you will want
 2. **Success**
 3. **Error**
 
-_REACT-DECLARATIVE-FETCH_ aims to give a dead simple and declarative API for handling the different state changes.
+_REACT-DECLARATIVE-FETCH_ aims to give a dead simple and declarative API for handling the different state changes in a API call.
 <br>  
 **example**
 
@@ -44,9 +44,24 @@ The `<Fetch>` component can also be used alone as a render props component.
 
 ### Props
 
-| Name      | type    | Required                      | Description                                                                                        |
+| Name      | Type    | Required                      | Description                                                                                        |
 | --------- | ------- | ----------------------------- | -------------------------------------------------------------------------------------------------- |
 | url       | string  | yes                           | the url to make the request from                                                                   |
 | options   | object  | no, the default method is GET | options to pass to the request agent (i.e axios) like method, headers, etc...                      |
 | withCache | boolean | no                            | if present the results would be cached and would be retrieved from the cache on following requests |
 | delay     | number  | no                            | delay the request X amount of milliseconds                                                         |
+
+### State - render props components will be invoked with the state object
+
+| Name       | Type     | Description                                 |
+| ---------- | -------- | ------------------------------------------- |
+| fetching   | boolean  | Is in process of fetching the data          |
+| success    | boolean  | Did the request ended successfuly           |
+| data       | object   | The current request respones                |
+| error      | Error    | The current request Error                   |
+| resetCache | function | function that resets the cache when invoked |
+
+## TODO
+
+[ ] expose reset cache api outside of the component.  
+[ ] add examples and use cases.
