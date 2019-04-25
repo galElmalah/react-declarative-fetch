@@ -30,7 +30,7 @@ const ImageGallery = () => {
       <Fetch.Error>Error while loading the images</Fetch.Error>
       <Fetch.Fetching>show loader</Fetch.Fetching>
       <Fetch.Success>
-        {data => data.map(img => <Image {...img} />)}
+        {({ data }) => data.map(img => <Image {...img} />)}
       </Fetch.Success>
     </Fetch>
   );
@@ -39,7 +39,8 @@ const ImageGallery = () => {
 
 ## API
 
-Both `<Fetch.Success>` and `<Fetch.Error>` can be used as a render props and they will be invoked with the response data or the Error passed to them.
+Both `<Fetch.Success>` and `<Fetch.Error>` can be used as a render props and they will be invoked with the current state.  
+The `<Fetch>` component can also be used alone as a render props component.
 
 ### Props
 
