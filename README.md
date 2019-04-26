@@ -42,6 +42,8 @@ const ImageGallery = () => {
 };
 ```
 
+[more examples](https://codesandbox.io/embed/j7q27xwlj9?fontsize=14)
+
 Each of the compound components will only get rendered when the appropriate state is set, i.e when fetching `<Fetch.Fetching>` will get rendered and at the end of the request either `<Fetch.Success>` or `<Fetch.Error>` will get rendered.
 
 ## API
