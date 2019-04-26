@@ -12,6 +12,7 @@ component while fetching and taking into account the different responses from th
 
 ## How
 
+
 In most cases, when making an async external call from a component you will want to account for three different phases in the request lifecycle:
 
 1. **Fetching**
@@ -20,7 +21,12 @@ In most cases, when making an async external call from a component you will want
 
 _REACT-DECLARATIVE-FETCH_ aims to give a dead simple and declarative API for handling the different state changes in a API call.
 <br>  
+
 **example**
+
+```npm
+npm i react-declarative-fetch
+```
 
 ```javascript
 import { Fetch } from 'react-declarative-fetch';
@@ -64,4 +70,5 @@ The `<Fetch>` component can also be used alone as a render props component and w
 ## TODO
 
 [ ] expose reset cache api outside of the component.  
-[ ] add examples and use cases.
+[ ] add examples and use cases.  
+[ ] move to the native fetch instead of axios.
