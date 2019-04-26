@@ -12,15 +12,14 @@ component while fetching and taking into account the different responses from th
 
 ## How
 
-
 In most cases, when making an async external call from a component you will want to account for three different phases in the request lifecycle:
 
 1. **Fetching**
 2. **Success**
 3. **Error**
 
-_REACT-DECLARATIVE-FETCH_ aims to give a dead simple and declarative API for handling the different state changes in a API call.
-<br>  
+_REACT-DECLARATIVE-FETCH_ aims to give a dead simple and declarative API for handling the different state changes in an API call.
+<br>
 
 **example**
 
@@ -42,6 +41,8 @@ const ImageGallery = () => {
   );
 };
 ```
+
+Each of the compound components will only get rendered when the appropriate state is set, i.e when fetching `<Fetch.Fetching>` will get rendered and at the end of the request either `<Fetch.Success>` or `<Fetch.Error>` will get rendered.
 
 ## API
 
