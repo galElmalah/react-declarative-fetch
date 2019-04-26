@@ -26,7 +26,7 @@ _REACT-DECLARATIVE-FETCH_ aims to give a dead simple and declarative API for han
 import { Fetch } from 'react-declarative-fetch';
 const ImageGallery = () => {
   return (
-    <Fetch url="someImageApiUrl">
+    <Fetch url="https://www.someImageApiUrl">
       <Fetch.Error>Error while loading the images</Fetch.Error>
       <Fetch.Fetching>show loader</Fetch.Fetching>
       <Fetch.Success>
@@ -40,7 +40,7 @@ const ImageGallery = () => {
 ## API
 
 Both `<Fetch.Success>` and `<Fetch.Error>` can be used as a render props and they will be invoked with the current state.  
-The `<Fetch>` component can also be used alone as a render props component.
+The `<Fetch>` component can also be used alone as a render props component and will be invoked with the current state.
 
 ### Props
 
